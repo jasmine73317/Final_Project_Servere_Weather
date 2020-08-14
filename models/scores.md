@@ -5,8 +5,15 @@ Testing Data Score: [1.659946206991967, 0.4498086]
 
 three layer model:
 
+52 classes:
+
 Training Data Score: [1.5182889699935913, 0.4900829792022705]
 Testing Data Score: [1.5460681915283203, 0.4853349030017853]
+
+binary classes:
+
+Training Data Score: [0.08048690855503082, 0.9774081707000732]
+Testing Data Score: [0.08433913439512253, 0.9765116572380066]
 
 six layer model: 
 
