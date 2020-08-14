@@ -2,11 +2,6 @@
 @import url(font-awesome.min.css);
 @import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700");
 
-/*
-	Hielo by TEMPLATED
-	templated.co @templatedco
-	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
-*/
 
 /* Reset */
 
@@ -2552,12 +2547,13 @@ input[type="radio"]:focus+label:before {
 
 .image.fit {
 	display: block;
-	margin: 0 0 2rem 0;
+	margin: 0 2 2rem 0;
 	width: 100%;
 }
 
 .image.fit img {
-	width: 100%;
+	width: 105%;
+	height: 110%;
 }
 
 .image.main {
