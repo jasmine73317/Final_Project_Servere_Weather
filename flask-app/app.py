@@ -1,5 +1,6 @@
 # app.py    
 from flask import Flask, request, jsonify, render_template
+from flask import request 
 
 app = Flask(__name__)
 
@@ -8,6 +9,13 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     return render_template('index.html')
+
+#model input(?)
+@app.route('/resource/', methods = ['POST'])
+def update_text():
+    data= request.data
+    print('hell0')
+    return data
 
 # A welcome message to test our server
 @app.route('/summary/')
