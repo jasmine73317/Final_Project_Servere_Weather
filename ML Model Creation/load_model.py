@@ -3,6 +3,8 @@ from tensorflow import keras
 import os
 import datetime
 
+import pymongo
+
 import IPython
 import IPython.display
 import matplotlib as mpl
@@ -12,8 +14,15 @@ import pandas as pd
 import seaborn as sns
 import tensorflow as tf
 
+conn = 'mongodb+srv://newuser:datasciproj2@cluster0.iadrt.mongodb.net/test'
+client = pymongo.MongoClient(conn)
+db = client.Weather
+collection = db["LSTMRNN"]
+
 model = keras.models.load_model('../MODELS/Denver_model.h5')
 print(model.summary())
+
+
 
 predict_df = train_df.tail(24) #any dataframe 24 rows and 11 columns 
 prediction_set = predict_df.to_numpy()[np.newaxis,:]
