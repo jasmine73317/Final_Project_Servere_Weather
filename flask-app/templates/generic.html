@@ -11,7 +11,7 @@
 
 		<!-- Header -->
 			<header id="header">
-				<div class="logo"><a href="/">Severe <span>Weather</span></a></div>
+				<div class="logo"><a href="/"><span>Weather In Bloom</span></a></div>
 				<a href="#menu">Menu</a>
 			</header>
 
@@ -19,7 +19,7 @@
 			<nav id="menu">
 				<ul class="links">
 					<li><a href="/">Home</a></li>
-					<li><a href="/summary/">Generic</a></li>
+					<li><a href="/summary/">Summary</a></li>
 				</ul>
 			</nav>
 
@@ -42,11 +42,21 @@
 								<p>Recap and Findings</p>
 								<h2>Model Analysis</h2>
 							</header>
-							<p>################SAMPLE PARAGRAPH ######################## ######################## ######################## ######################## ########################</p>
+							
+							<div class="login">
+								<h1>Weather Forecast</h1>
+								<!-- Main input for Receiving Query to ML Model-->
+								<form action= method="POST">
+									<input type="text" name="city" placeholder="City" required="required"/>
+									<input type="text" name="date" placeholder="Date" required="required"/>
+									
+									<button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+								</form>
+									<br>
+									<br>
+									
 
-							<p>################SAMPLE PARAGRAPH ######################## ######################## ######################## ######################## ########################</p>
-
-							<p>################SAMPLE PARAGRAPH ######################## ######################## ######################## ######################## ########################</p>
+							</div>
 						</div>
 					</div>
 				</div>

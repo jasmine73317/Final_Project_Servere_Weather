@@ -4,7 +4,6 @@ from flask import request
 
 app = Flask(__name__)
 
-
 # type in 'index' at the end of url to see sample test *** note flask needs a templates folder 
 @app.route('/')
 def index():
