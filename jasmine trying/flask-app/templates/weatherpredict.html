@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>City Weather</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/superhero/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  <link rel="stylesheet" href="../static/css/weatherpredict.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">Weather Prediction
+            
+            <!-- <img class="nav-ufo" src="../static/images/ufo.svg"> -->
+          </a>
+        </div>
+      </div>
+    </nav>
+    <div class="hero text-center">
+      <h1>Weather Prediction</h1>
+      <p>Be prepared, Be comfortable</p>
+    </div>
+    <!-- <div class="container">
+      <div class="row margin-top-50">
+        <div class="col-md-2">
+          <aside class="filters">
+            <div class="panel panel-default">
+              <div class="panel-heading">Filter Search</div>
+              <div class="panel-body">
+                <form>
+                  <div class="form-group">
+                    <ul class="list-group" id="filters">
+                      <li class="filter list-group-item">
+                        <label for="date">Enter a City</label>
+                        <input class="form-control" id="datetime" type="text" placeholder="1/11/2011">
+                      </li>
+                    </ul>
+                  </div>
+                  <button id="filter-btn" type="button" class="btn btn-default">Filter Table</button>
+                </form>
+              </div>
+            </div>
+          </aside>
+        </div>
+        <div class="col-md-10">
+          <div id="table-area" class="">
+            <table id="ufo-table" class="table table-striped">
+              <thead>
+                <tr>
+                  <th class="table-head">Date</th>
+                  <th class="table-head">City</th>
+                  <th class="table-head">State</th>
+                  <th class="table-head">Country</th>
+                  <th class="table-head">Shape</th>
+                  <th class="table-head">Duration</th>
+                  <th class="table-head">Comments</th>
+                </tr>
+              </thead>
+
+              <tbody></tbody>
+            </table>
+          </div>
+        </div> -->
+        <!-- <div>
+          {{prediction_value}}
+        </div> -->
+        <div class="container">
+          <aside class="filters">
+            <!-- <aside class="filters"> -->
+            <div class="panel panel-default">
+              <div class="panel-heading">Filter Search</div>
+              <div class="chicago-pic">
+                <form action = "{{url_weatherpredict}}" method= "post">
+                  <div class="form-group">
+                    <ul class="list-group" id="filters">
+                      <li class="chicago-pic">
+                        <label for="Temperature">Temperature:</label>
+                <input type="number" value=284 id="Temperature" name="Temperature"><br><br>
+                <label for="Humidity">Humidity:</label>
+                <input type="number" value=15 id="Humidity" name="Humidity"><br><br>
+                <label for="Wind_Speed">Wind_Speed:</label>
+                <input type="number" value=3 id="Wind_Speed" name="Wind_Speed"><br><br>
+                <label for="Wind_Direction">Wind_Direction:</label>
+                <input type="number" value=20 id="Wind_Direction" name="Wind_Direction"><br><br>
+                <label for="Pressure">Pressure:</label>
+                <input type="number" value=1000 id="Pressure" name="Pressure"><br><br>
+                <label for="Month Temp Max">Month Temp Max:</label>
+                <input type="number" value=290 id="Month Temp Max" name="Month Temp Max"><br><br>
+                <label for="Month Wind_Speed Max">Month Wind_Speed Max:</label>
+                <input type="number" value=15 id="Month Wind_Speed Max" name="Month Wind_Speed Max"><br><br>
+                
+                <input type="submit">>
+            </ul>
+                      </li>
+                    </ul>
+                  <!-- </aside> -->
+                  </div>
+                </div>
+                  </div>
+
+          <div class ="container-fluid">
+               <div style="font-family:verdana" style="font-size:600px">
+                {{prediction_value}}
+               </div>
+
+        
+          <div class = "chicago-pic2">
+            <img src = "../static/images/chicago2.jpg" class= "chicago-pic2" alt>
+          </div> 
+        </div>
+
+        <!-- <div class = "col-lg-6 pt-4 pt-lg-0">
+            <h3>Weather Prediction in your City</h3>
+            <p class = "font=italic">
+            
+            </p>
+            <!-- {% if not prediction_value %} -->
+            <!-- <h1>if</h1>
+              <form  method="post" >
+                
+                <label for="Temperature">Temperature:</label>
+                <input type="text" id="Temperature" name="Temperature"><br><br>
+                <label for="Humidity">Humidity:</label>
+                <input type="text" id="Humidity" name="Humidity"><br><br>
+                <label for="Wind_Speed">Wind_Speed:</label>
+                <input type="text" id="Wind_Speed" name="Wind_Speed"><br><br>
+                <label for="Wind_Direction">Wind_Direction:</label>
+                <input type="text" id="Wind_Direction" name="Wind_Direction"><br><br>
+                <label for="Pressure">Pressure:</label>
+                <input type="text" id="Pressure" name="Pressure"><br><br>
+                <label for="Month Temp Max">Humidity:</label>
+                <input type="text" id="Month Temp Max" name="Month Temp Max"><br><br>
+                <label for="Month Wind_Speed Max">Temperature:</label>
+                <input type="text" id="Month Wind_Speed Max" name="Month Wind_Speed Max"><br><br>
+                
+                <input type="submit">
+            </form>
+            <!-- {% else %} -->
+            <!-- <h1>Else </h1>
+              {{prediction_value}}
+            <!-- {% endif %} -->
+            <!-- <ul>
+                <li>
+                    <i class="bx bx-check-double"></i>
+                    "1. the weather description is ........"
+                </li>
+                <li>
+                    <i class="bx bx-check-double"></i>
+                    "2. the possibility is ........"
+                </li>
+            </ul> -->
+        </div>
+      </div> 
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
+  <!-- <script src="../static/js/data.js"></script>
+  <script src="../static/js/app.js"></script> -->
+</body>
+<!-- <footer class="footer">
+  <span class="bottom">Weather Prediction</span>
+</footer> -->
+
+</html>
